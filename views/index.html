@@ -1,0 +1,3182 @@
+
+{% extends 'layouts/main.html' %}
+
+{% block title %}核心组件-Baie前端代码库{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/assets/styles/docs.css">
+<link rel="stylesheet" href="/assets/styles/ionicons.css"/>
+<link rel="stylesheet" href="/assets/styles/main.css"/>
+<link rel="stylesheet" href="/assets/vendor/highlight/highlight.css">
+<style>
+    body {
+        background: #252525;
+    }
+    .us-overflow-container {
+        font-family: "Proxima Nova", "Helvetica Neue", Helvetica,"PingFang SC","Microsoft YaHei","微软雅黑", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    article>* + h1, article>* + h2, article>* + h3, article>* + h4, article>* + h5, article>* + h6 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    article>* + address, article>* + blockquote, article>* + dl, * + fieldset, article>* + figure, * + ol, article>* + p, article>* + pre, article>* + ul {
+        margin-top: 15px;
+        margin-bottom: 14px;
+    }
+    pre {
+        padding: 10px;
+        background: #fafafa;
+        font: 13px/18px Consolas,monospace,serif;
+        color: #666;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        overflow: auto;
+        border: 1px solid #e5e5e5;
+        border-radius: 3px;
+    }
+    .width-750 {
+        width: 7.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<nav class="tm-navbar us-navbar us-navbar-attached">
+    <div class="us-container us-container-center">
+
+        <a class="us-navbar-brand us-hidden-small" href="index.html">
+            <img class="us-margin us-margin-remove" src="/assets/images/logo.png" width="90" height="30" title="UIkit" alt="UIkit">
+        </a>
+
+        <ul class="us-navbar-nav us-hidden-small">
+            <li class="us-active"><a href="index.html">核心组件</a></li>
+            <li><a href="javascript:;">Javascript插件</a></li>
+            <li><a href="javascript:;">前端规范</a></li>
+            <li><a href="vision-standard.html">视觉规范</a></li>
+        </ul>
+
+        <a href="#tm-offcanvas" class="us-navbar-toggle us-visible-small" data-us-offcanvas></a>
+
+        <div class="us-navbar-brand us-navbar-center us-visible-small">
+            <img src="/assets/images/logo.png" width="90" height="30" title="UIkit" alt="UIkit">
+        </div>
+
+    </div>
+</nav>
+
+<div class="tm-middle">
+    <div class="us-container us-container-center">
+
+        <div class="us-grid">
+            <div class="tm-main us-width-medium-3-4" id="main">
+                <!-- 基础 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="base">基础</h1>
+
+                    <h2>字体</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th class="us-width-1-4">Class类</th>
+                                <th class="us-width-3-4">描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-font-12</code></td>
+                                <td><span style="font-size: 12px">12px</span>，等同于h6</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-13</code></td>
+                                <td><span style="font-size: 13px">13px</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-14</code></td>
+                                <td><span style="font-size: 14px">14px</span>，等同于h5</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-15</code></td>
+                                <td><span style="font-size: 15px">15px</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-16</code></td>
+                                <td><span style="font-size: 16px">16px</span>，等同于h4</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-18</code></td>
+                                <td><span style="font-size: 18px">18px</span>，等同于h3</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-20</code></td>
+                                <td><span style="font-size: 20px">20px</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-22</code></td>
+                                <td><span style="font-size: 22px">22px</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-24</code></td>
+                                <td><span style="font-size: 24px">24px</span>，等同于h2</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-26</code></td>
+                                <td><span style="font-size: 26px">26px</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-28</code></td>
+                                <td><span style="font-size: 28px">28px</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-30</code></td>
+                                <td><span style="font-size: 30px">30px</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-32</code></td>
+                                <td><span style="font-size: 32px">32px</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-34</code></td>
+                                <td><span style="font-size: 34px">34px</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-font-36</code></td>
+                                <td><span style="font-size: 36px">36px</span>，等同于h1</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>颜色</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th class="us-width-1-4">Class类</th>
+                                <th class="us-width-3-4">描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-color-orange</code></td>
+                                <td><span class="baie-color-orange">#ea5503</span>，系统主色，用于特别强调或突出的文字、按钮和Icon。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-color-black</code></td>
+                                <td><span class="baie-color-black">#161616</span>，用于重要级文字信息、引导词、标题等。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-color-gray</code></td>
+                                <td><span class="baie-color-gray">#838383</span>，用于辅助、次要的文字信息。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-color-lightgray</code></td>
+                                <td><span class="baie-color-lightgray">#9e9e9e</span>，用于弱提示文字。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-bdcolor</code></td>
+                                <td><span class="baie-bdcolor" style="border-width: 1px; border-style: solid; padding: 0 3px;">#e4e4e4</span>，用于板块分隔线、描边。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-bgcolor</code></td>
+                                <td><span class="baie-bgcolor" style="padding: 0 3px">#f3f4f6</span>，用于区分板块的底色。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>图标</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th class="us-width-1-4">Class类</th>
+                                <th class="us-width-3-4">描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-icon_*</code></td>
+                                <td>图标样式</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <style>
+                        .us-icon-conset {
+                            list-style: none;
+                        }
+                        .us-icon-conset li {
+                            display: inline-block;
+                            margin-bottom: .10rem;
+                            width: .70rem;
+                            text-align: center;
+                        }
+                        .us-icon-conset li i {
+                            width: .45rem;
+                            height: .45rem;
+                        }
+                    </style>
+
+                    <ul class="us-icon-conset">
+                        <li><i class="baie-icon_add-checked"></i></li>
+                        <li><i class="baie-icon_address"></i></li>
+                        <li><i class="baie-icon_back"></i></li>
+                        <li><i class="baie-icon_cart"></i></li>
+                        <li><i class="baie-icon_cart-active"></i></li>
+                        <li><i class="baie-icon_checked"></i></li>
+                        <li><i class="baie-icon_checked-delete"></i></li>
+                        <li><i class="baie-icon_choose"></i></li>
+                        <li><i class="baie-icon_close"></i></li>
+                        <li><i class="baie-icon_collect"></i></li>
+                        <li><i class="baie-icon_complete"></i></li>
+                        <li><i class="baie-icon_delete"></i></li>
+                        <li><i class="baie-icon_detail"></i></li>
+                        <li><i class="baie-icon_download"></i></li>
+                        <li><i class="baie-icon_edit"></i></li>
+                        <li><i class="baie-icon_explain"></i></li>
+                        <li><i class="baie-icon_help"></i></li>
+                        <li><i class="baie-icon_hot"></i></li>
+                        <li><i class="baie-icon_instruction"></i></li>
+                        <li><i class="baie-icon_loading"></i></li>
+                        <li><i class="baie-icon_logistics"></i></li>
+                        <li><i class="baie-icon_mall"></i></li>
+                        <li><i class="baie-icon_mall-active"></i></li>
+                        <li><i class="baie-icon_my"></i></li>
+                        <li><i class="baie-icon_news"></i></li>
+                        <li><i class="baie-icon_people"></i></li>
+                        <li><i class="baie-icon_personal"></i></li>
+                        <li><i class="baie-icon_personal-active"></i></li>
+                        <li><i class="baie-icon_phone"></i></li>
+                        <li><i class="baie-icon_prompt"></i></li>
+                        <li><i class="baie-icon_chevron-up"></i></li>
+                        <li><i class="baie-icon_chevron-down"></i></li>
+                        <li><i class="baie-icon_chevron-left"></i></li>
+                        <li><i class="baie-icon_chevron-right"></i></li>
+                        <li><i class="baie-icon_rotate"></i></li>
+                        <li><i class="baie-icon_search"></i></li>
+                        <li><i class="baie-icon_settings"></i></li>
+                        <li><i class="baie-icon_upload"></i></li>
+                        <li><i class="baie-icon_wallet"></i></li>
+                        <li><i class="baie-icon_warn"></i></li>
+                        <li><i class="baie-icon_website-active"></i></li>
+                    </ul>
+
+                    <ul class="us-icon-conset">
+                        <li><i class="baie-icon_add-checked_b"></i></li>
+                        <li><i class="baie-icon_address_b"></i></li>
+                        <li><i class="baie-icon_back_b"></i></li>
+                        <li><i class="baie-icon_cart_b"></i></li>
+                        <li><i class="baie-icon_cart-active_b"></i></li>
+                        <li><i class="baie-icon_checked_b"></i></li>
+                        <li><i class="baie-icon_checked-delete_b"></i></li>
+                        <li><i class="baie-icon_choose_b"></i></li>
+                        <li><i class="baie-icon_close_b"></i></li>
+                        <li><i class="baie-icon_collect_b"></i></li>
+                        <li><i class="baie-icon_complete_b"></i></li>
+                        <li><i class="baie-icon_delete_b"></i></li>
+                        <li><i class="baie-icon_detail_b"></i></li>
+                        <li><i class="baie-icon_download_b"></i></li>
+                        <li><i class="baie-icon_edit_b"></i></li>
+                        <li><i class="baie-icon_explain_b"></i></li>
+                        <li><i class="baie-icon_help_b"></i></li>
+                        <li><i class="baie-icon_hot_b"></i></li>
+                        <li><i class="baie-icon_instruction_b"></i></li>
+                        <li><i class="baie-icon_loading_b"></i></li>
+                        <li><i class="baie-icon_logistics_b"></i></li>
+                        <li><i class="baie-icon_mall_b"></i></li>
+                        <li><i class="baie-icon_mall-active_b"></i></li>
+                        <li><i class="baie-icon_my_b"></i></li>
+                        <li><i class="baie-icon_news_b"></i></li>
+                        <li><i class="baie-icon_people_b"></i></li>
+                        <li><i class="baie-icon_personal_b"></i></li>
+                        <li><i class="baie-icon_personal-active_b"></i></li>
+                        <li><i class="baie-icon_phone_b"></i></li>
+                        <li><i class="baie-icon_prompt_b"></i></li>
+                        <li><i class="baie-icon_chevron-up_b"></i></li>
+                        <li><i class="baie-icon_chevron-down_b"></i></li>
+                        <li><i class="baie-icon_chevron-left_b"></i></li>
+                        <li><i class="baie-icon_chevron-right_b"></i></li>
+                        <li><i class="baie-icon_rotate_b"></i></li>
+                        <li><i class="baie-icon_search_b"></i></li>
+                        <li><i class="baie-icon_settings_b"></i></li>
+                        <li><i class="baie-icon_upload_b"></i></li>
+                        <li><i class="baie-icon_wallet_b"></i></li>
+                        <li><i class="baie-icon_warn_b"></i></li>
+                        <li><i class="baie-icon_website-active_b"></i></li>
+                    </ul>
+
+                    <ul class="us-icon-conset" style="background-color:#000; padding: .16rem 0;">
+                        <li><i class="baie-icon_add-checked_w"></i></li>
+                        <li><i class="baie-icon_address_w"></i></li>
+                        <li><i class="baie-icon_back_w"></i></li>
+                        <li><i class="baie-icon_cart_w"></i></li>
+                        <li><i class="baie-icon_cart-active_w"></i></li>
+                        <li><i class="baie-icon_checked_w"></i></li>
+                        <li><i class="baie-icon_checked-delete_w"></i></li>
+                        <li><i class="baie-icon_choose_w"></i></li>
+                        <li><i class="baie-icon_close_w"></i></li>
+                        <li><i class="baie-icon_collect_w"></i></li>
+                        <li><i class="baie-icon_complete_w"></i></li>
+                        <li><i class="baie-icon_delete_w"></i></li>
+                        <li><i class="baie-icon_detail_w"></i></li>
+                        <li><i class="baie-icon_download_w"></i></li>
+                        <li><i class="baie-icon_edit_w"></i></li>
+                        <li><i class="baie-icon_explain_w"></i></li>
+                        <li><i class="baie-icon_help_w"></i></li>
+                        <li><i class="baie-icon_hot_w"></i></li>
+                        <li><i class="baie-icon_instruction_w"></i></li>
+                        <li><i class="baie-icon_loading_w"></i></li>
+                        <li><i class="baie-icon_logistics_w"></i></li>
+                        <li><i class="baie-icon_mall_w"></i></li>
+                        <li><i class="baie-icon_mall-active_w"></i></li>
+                        <li><i class="baie-icon_my_w"></i></li>
+                        <li><i class="baie-icon_news_w"></i></li>
+                        <li><i class="baie-icon_people_w"></i></li>
+                        <li><i class="baie-icon_personal_w"></i></li>
+                        <li><i class="baie-icon_personal-active_w"></i></li>
+                        <li><i class="baie-icon_phone_w"></i></li>
+                        <li><i class="baie-icon_prompt_w"></i></li>
+                        <li><i class="baie-icon_chevron-up_w"></i></li>
+                        <li><i class="baie-icon_chevron-down_w"></i></li>
+                        <li><i class="baie-icon_chevron-left_w"></i></li>
+                        <li><i class="baie-icon_chevron-right_w"></i></li>
+                        <li><i class="baie-icon_rotate_w"></i></li>
+                        <li><i class="baie-icon_search_w"></i></li>
+                        <li><i class="baie-icon_settings_w"></i></li>
+                        <li><i class="baie-icon_upload_w"></i></li>
+                        <li><i class="baie-icon_wallet_w"></i></li>
+                        <li><i class="baie-icon_warn_w"></i></li>
+                        <li><i class="baie-icon_website-active_w"></i></li>
+                    </ul>
+
+                    <pre><code>
+    &lt;i class="baie-icon_add-checked"&gt;&lt;/i&gt;
+</code></pre>
+
+                    <h2>层级</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th class="us-width-1-4">类型</th>
+                                <th class="us-width-1-4">层级</th>
+                                <th class="us-width-2-4">描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>Content</code></td>
+                                <td>默认</td>
+                                <td>内容层，承载页面主要内容</td>
+                            </tr>
+                            <tr>
+                                <td><code>Navigation</code></td>
+                                <td>100</td>
+                                <td>导航层，位于内容层之上，在用户滑动内容层时可保持位置不动，通常用于承载导航栏等需要固定在页面的元素。</td>
+                            </tr>
+                            <tr>
+                                <td><code>Mask</code></td>
+                                <td>1023</td>
+                                <td>蒙层，配合Popout层使用，用于锁定内容层和导航层操作，不单独使用。</td>
+                            </tr>
+                            <tr>
+                                <td><code>Popout</code></td>
+                                <td>1024</td>
+                                <td>弹出层，作为内容层和导航层的补充，用于承载弹窗通知、操作菜单、菜单、成功或加载中等状态的Toast，表单报错提示等弹出内容。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>边框</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th class="us-width-1-4">Class类</th>
+                                <th class="us-width-3-4">描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.b-1px</code></td>
+                                <td>全框</td>
+                            </tr>
+                            <tr>
+                                <td><code>.bh-1px</code></td>
+                                <td>上下框</td>
+                            </tr>
+                            <tr>
+                                <td><code>.bv-1px</code></td>
+                                <td>左右框</td>
+                            </tr>
+                            <tr>
+                                <td><code>.bt-1px</code></td>
+                                <td>上边框</td>
+                            </tr>
+                            <tr>
+                                <td><code>.br-1px</code></td>
+                                <td>右边框</td>
+                            </tr>
+                            <tr>
+                                <td><code>.bb-1px</code></td>
+                                <td>下边框</td>
+                            </tr>
+                            <tr>
+                                <td><code>.bl-1px</code></td>
+                                <td>左边框</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </article>
+
+                <!-- 网格 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="grid">网格</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table us-text-nowrap">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-grids</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-grids_noborder</code></td>
+                                <td>父元素，无边框。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-grid</code></td>
+                                <td>子元素，设置单元格属性。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-grid__icon</code></td>
+                                <td>次子元素，图标。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-grid__label</code></td>
+                                <td>次子元素，标签。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-grids">
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                    </div>
+
+                    <pre><code>
+&lt;div class="baie-grids"&gt;
+    &lt;a href="javascript:;" class="baie-grid"&gt;
+        &lt;div class="baie-grid__icon"&gt;
+            &lt;img src="/assets/images/icon_tabbar.png" alt=""&gt;
+        &lt;/div&gt;
+        &lt;p class="baie-grid__label"&gt;Grid&lt;/p&gt;
+    &lt;/a&gt;
+
+    &lt;a href="javascript:;" class="baie-grid"&gt;
+        &lt;div class="baie-grid__icon"&gt;
+            &lt;img src="/assets/images/icon_tabbar.png" alt=""&gt;
+        &lt;/div&gt;
+        &lt;p class="baie-grid__label"&gt;Grid&lt;/p&gt;
+    &lt;/a&gt;
+
+    &lt;a href="javascript:;" class="baie-grid"&gt;
+        &lt;div class="baie-grid__icon"&gt;
+            &lt;img src="/assets/images/icon_tabbar.png" alt=""&gt;
+        &lt;/div&gt;
+        &lt;p class="baie-grid__label"&gt;Grid&lt;/p&gt;
+    &lt;/a&gt;
+
+    &lt;a href="javascript:;" class="baie-grid"&gt;
+        &lt;div class="baie-grid__icon"&gt;
+            &lt;img src="/assets/images/icon_tabbar.png" alt=""&gt;
+        &lt;/div&gt;
+        &lt;p class="baie-grid__label"&gt;Grid&lt;/p&gt;
+    &lt;/a&gt;
+
+    &lt;a href="javascript:;" class="baie-grid"&gt;
+        &lt;div class="baie-grid__icon"&gt;
+            &lt;img src="/assets/images/icon_tabbar.png" alt=""&gt;
+        &lt;/div&gt;
+        &lt;p class="baie-grid__label"&gt;Grid&lt;/p&gt;
+    &lt;/a&gt;
+
+    &lt;a href="javascript:;" class="baie-grid"&gt;
+        &lt;div class="baie-grid__icon"&gt;
+            &lt;img src="/assets/images/icon_tabbar.png" alt=""&gt;
+        &lt;/div&gt;
+        &lt;p class="baie-grid__label"&gt;Grid&lt;/p&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+                    <div class="baie-grids baie-grids_noborder">
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                        <a href="javascript:;" class="baie-grid">
+                            <div class="baie-grid__icon">
+                                <img src="/assets/images/icon_tabbar.png" alt="">
+                            </div>
+                            <p class="baie-grid__label">Grid</p>
+                        </a>
+                    </div>
+
+                    <pre><code>
+    &lt;div class="baie-grids baie-grids_noborder"&gt;
+        ...
+    &lt;/div&gt;
+</code></pre>
+
+                </article>
+
+                <!-- flex -->
+                <article class="us-article">
+
+                    <h1 id="flex">布局</h1>
+
+                    <h2>均等分割</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table us-text-nowrap">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-flex</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-flex__item</code></td>
+                                <td>子元素，设置flex条目属性。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <p>
+                    <div class="baie-flex">
+                        <div class="baie-flex__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                    </div>
+                    <div class="baie-flex">
+                        <div class="baie-flex__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                    </div>
+                    <div class="baie-flex">
+                        <div class="baie-flex__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                    </div>
+                    </p>
+                    <pre><code>
+    &lt;div class="baie-flex"&gt;
+        &lt;div class="baie-flex__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="baie-flex"&gt;
+        &lt;div class="baie-flex__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-flex__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="baie-flex"&gt;
+        &lt;div class="baie-flex__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-flex__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-flex__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+                    <h2>响应式流动</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table us-text-nowrap">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-flex-rsp</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-flex-rsp__item</code></td>
+                                <td>子元素，设置flex条目属性。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <p>
+                    <div class="baie-flex-rsp">
+                        <div class="baie-flex-rsp__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex-rsp__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex-rsp__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex-rsp__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex-rsp__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex-rsp__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex-rsp__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex-rsp__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                        <div class="baie-flex-rsp__item">
+                            <div class="placeholder">baie</div>
+                        </div>
+                    </div>
+                    </p>
+
+                    <pre><code>
+    &lt;div class="baie-flex-rsp"&gt;
+        &lt;div class="baie-flex-rsp__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-flex-rsp__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-flex-rsp__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-flex-rsp__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-flex-rsp__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-flex-rsp__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-flex-rsp__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-flex-rsp__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-flex-rsp__item"&gt;
+            &lt;div class="placeholder"&gt;baie&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+
+                </article>
+
+                <!-- 头部 -->
+                <article class="us-article">
+
+                    <h1 id="header">头部</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table us-text-nowrap">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-headbar</code></td>
+                                <td>父元素，创建容器</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-headbar__hd</code></td>
+                                <td>子元素，头部，返回</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-headbar__bd</code></td>
+                                <td>子元素，主体，标题</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-headbar__ft</code></td>
+                                <td>子元素，尾部，操作</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-headbar">
+
+                        <a class="baie-headbar__hd" href="javascript:;">
+                            <i class="baie-icon_chevron-left_b"></i>
+                        </a>
+
+                        <div class="baie-headbar__bd">购物车</div>
+
+                        <div class="baie-headbar__ft">编辑全部</div>
+                    </div>
+                    <pre><code>
+
+    &lt;div class="baie-headbar"&gt;
+
+        &lt;a class="baie-headbar__hd" href="javascript:;"&gt;
+            &lt;i class="baie-icon_chevron-left"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+
+        &lt;div class="baie-headbar__bd"&gt;购物车&lt;/div&gt;
+
+        &lt;div class="baie-headbar__ft"&gt;编辑全部&lt;/div&gt;
+    &lt;/div&gt;
+
+</code></pre>
+
+                </article>
+
+                <!-- 页脚 -->
+                <article class="us-article">
+
+                    <h1 id="footer">页脚</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table us-text-nowrap">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-footer</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-footer__links</code></td>
+                                <td>子元素，设置链接样式。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-footer__text</code></td>
+                                <td>子元素，设置文本样式。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-footer">
+                        <p class="baie-footer__links">
+                            <a href="javascript:;" class="baie-footer__link">底部链接</a>
+                            <a href="javascript:;" class="baie-footer__link">底部链接</a>
+                        </p>
+                        <p class="baie-footer__text">Copyright © 2008-2016 baidu.com</p>
+                    </div>
+                    <pre><code>
+    &lt;div class="baie-footer"&gt;
+        &lt;p class="baie-footer__links"&gt;
+            &lt;a href="javascript:;" class="baie-footer__link"&gt;底部链接&lt;/a&gt;
+            &lt;a href="javascript:;" class="baie-footer__link"&gt;底部链接&lt;/a&gt;
+        &lt;/p&gt;
+
+        &lt;p class="baie-footer__text"&gt;Copyright © 2008-2016 baidu.com&lt;/p&gt;
+    &lt;/div&gt;
+</code></pre>
+
+                </article>
+
+                <!-- 面板 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="panel">面板</h1>
+
+                    <hr class="us-article-divider">
+
+                    <h2>用法</h2>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-panel</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-panel__hd</code></td>
+                                <td>子元素，头部。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-panel__bd</code></td>
+                                <td>子元素，主体。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-panel__ft</code></td>
+                                <td>子元素，尾部。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-panel">
+                        <div class="baie-panel__hd">最新消息</div>
+                        <div class="baie-panel__bd">
+                            <div style="padding: .20rem .30rem; font-size: .24rem">
+                                美国大选结果揭晓，共和党总统候选人特朗普战胜民主党候选人、前国务卿希拉里·克林顿赢得总统选举，将成为美国第四十五任总统。
+                            </div>
+                        </div>
+                        <div class="baie-panel__ft">
+                            <a href="javascript:;" class="baie-cell baie-cell_access baie-cell_link">
+                                <div class="baie-cell__bd">查看更多</div>
+                                <span class="baie-cell__ft"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <pre><code>
+&lt;div class="baie-panel baie-panel_access"&gt;
+    &lt;div class="baie-panel__hd"&gt;最新消息&lt;/div&gt;
+
+    &lt;div class="baie-panel__bd"&gt;
+        ...
+    &lt;/div&gt;
+
+    &lt;div class="baie-panel__ft"&gt;
+        &lt;a href="javascript:;" class="baie-cell baie-cell_access baie-cell_link"&gt;
+            &lt;div class="baie-cell__bd"&gt;查看更多&lt;/div&gt;
+            &lt;span class="baie-cell__ft"&gt;&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+                </article>
+
+                <!-- 列表 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="list">列表</h1>
+
+                    <hr class="us-article-divider">
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-cells</code></td>
+                                <td>父元素，列表。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell</code></td>
+                                <td>子元素，列表项。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell__hd</code></td>
+                                <td>次子元素，头部。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell__bd</code></td>
+                                <td>次子元素，主体。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell__ft</code></td>
+                                <td>次子元素，尾部。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <p>不带跳转的列表</p>
+
+                    <div class="baie-cells">
+
+                        <div class="baie-cell">
+                            <div class="baie-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:.40rem;margin-right:.10rem;display:block"></div>
+                            <div class="baie-cell__bd">
+                                <p>cell standard</p>
+                            </div>
+                            <div class="baie-cell__ft">说明文字</div>
+                        </div>
+                        <div class="baie-cell">
+                            <div class="baie-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:.40rem;margin-right:.10rem;display:block"></div>
+                            <div class="baie-cell__bd">
+                                <p>cell standard</p>
+                            </div>
+                            <div class="baie-cell__ft">说明文字</div>
+                        </div>
+                    </div>
+
+                    <p>带跳转的列表</p>
+
+                    <div class="baie-cells">
+
+                        <a class="baie-cell baie-cell_access" href="javascript:;">
+                            <div class="baie-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:.40rem;margin-right:.10rem;display:block"></div>
+                            <div class="baie-cell__bd">
+                                <p>cell standard</p>
+                            </div>
+                            <div class="baie-cell__ft">说明文字</div>
+                        </a>
+                        <a class="baie-cell baie-cell_access" href="javascript:;">
+                            <div class="baie-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:.40rem;margin-right:.10rem;display:block"></div>
+                            <div class="baie-cell__bd">
+                                <p>cell standard</p>
+                            </div>
+                            <div class="baie-cell__ft">说明文字</div>
+                        </a>
+                    </div>
+                    <pre><code>
+    //不带跳转的列表
+    &lt;div class="baie-cells"&gt;
+        &lt;div class="baie-cell"&gt;
+            &lt;div class="baie-cell__hd"&gt;
+                &lt;img src="" alt="" style="width:.40rem;margin-right:.10rem;display:block"&gt;
+            &lt;/div&gt;
+
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;p&gt;cell standard&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="baie-cell__ft"&gt;说明文字&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    //带跳转的列表
+    &lt;div class="baie-cells"&gt;
+        &lt;a class="baie-cell baie-cell_access" href="javascript:;"&gt;
+            &lt;div class="baie-cell__hd"&gt;
+                &lt;img src="" alt="" style="width:.40rem;margin-right:.10rem;display:block"&gt;
+            &lt;/div&gt;
+
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;p&gt;cell standard&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="baie-cell__ft"&gt;说明文字&lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+</code></pre>
+
+                    <div class="baie-cells">
+                        <div class="baie-cell baie-cell_avatar baie-cell_access">
+                            <div class="baie-cell__bd">用户头像</div>
+                            <div class="baie-cell__ft">
+                                <img src="/assets/images/avatar.png" alt="" class="baie-cell_avatar-img"/>
+                            </div>
+                        </div>
+
+                        <a class="baie-cell baie-cell_access" href="javascript:;">
+                            <div class="baie-cell__bd">
+                                <p>微信解绑</p>
+                            </div>
+                            <div class="baie-cell__ft"></div>
+                        </a>
+
+                        <a class="baie-cell baie-cell_access" href="javascript:;">
+                            <div class="baie-cell__bd">
+                                <p>联系我们</p>
+                            </div>
+                            <div class="baie-cell__ft"></div>
+                        </a>
+                    </div>
+                    <pre><code>
+    &lt;div class="baie-cells"&gt;
+        &lt;div class="baie-cell baie-cell_avatar baie-cell_access"&gt;
+            &lt;div class="baie-cell__bd"&gt;用户头像&lt;/div&gt;
+            &lt;div class="baie-cell__ft"&gt;
+                &lt;img src="/assets/images/avatar.png" alt="" class="baie-cell_avatar-img"/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;a class="baie-cell baie-cell_access" href="javascript:;"&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;p&gt;微信解绑&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="baie-cell__ft"&gt;&lt;/div&gt;
+        &lt;/a&gt;
+
+        &lt;a class="baie-cell baie-cell_access" href="javascript:;"&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;p&gt;联系我们&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="baie-cell__ft"&gt;&lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+</code></pre>
+
+
+                </article>
+
+                <!-- 表单 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="input">表单</h1>
+
+                    <hr class="us-article-divider">
+
+                    <h2>单选列表项</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-cells_radio</code></td>
+                                <td>父元素，定义单选列表。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-check__label</code></td>
+                                <td>子元素，设置触发点击时的颜色。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-check</code></td>
+                                <td>绝对定位，隐藏单选按钮。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-icon_checked</code></td>
+                                <td>选中状态。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-cells baie-cells_radio">
+                        <label class="baie-cell baie-check__label" for="x11">
+                            <div class="baie-cell__bd">
+                                <p>cell standard</p>
+                            </div>
+                            <div class="baie-cell__ft">
+                                <input type="radio" class="baie-check" name="radio1" id="x11">
+                                <span class="baie-icon_checked"></span>
+                            </div>
+                        </label>
+
+                        <label class="baie-cell baie-check__label" for="x12">
+                            <div class="baie-cell__bd">
+                                <p>cell standard</p>
+                            </div>
+                            <div class="baie-cell__ft">
+                                <input type="radio" name="radio1" class="baie-check" id="x12" checked="checked">
+                                <span class="baie-icon_checked"></span>
+                            </div>
+                        </label>
+
+                        <a href="javascript:;" class="baie-cell baie-cell_link">
+                            <div class="baie-cell__bd">添加更多</div>
+                        </a>
+                    </div>
+
+                    <pre><code>
+    &lt;div class="baie-cells baie-cells_radio"&gt;
+        &lt;label class="baie-cell baie-check__label" for="x11"&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;p&gt;cell standard&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="baie-cell__ft"&gt;
+                &lt;input type="radio" name="radio1" class="baie-check" id="x11"&gt;
+                &lt;span class="baie-icon_checked"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/label&gt;
+
+        &lt;a href="javascript:;" class="baie-cell baie-cell_link"&gt;
+            &lt;div class="baie-cell__bd"&gt;添加更多&lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+</code></pre>
+
+                    <h2>复选列表项</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-cells_checkbox</code></td>
+                                <td>父元素，定义复选列表。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-check__label</code></td>
+                                <td>子元素，设置触发点击时的颜色。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-check</code></td>
+                                <td>绝对定位，隐藏单选按钮</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-icon_checked</code></td>
+                                <td>选中状态</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-cells baie-cells_checkbox">
+                        <label class="baie-cell baie-check__label" for="s11">
+                            <div class="baie-cell__hd">
+                                <input type="checkbox" class="baie-check" name="checkbox1" id="s11" checked="checked">
+                                <i class="baie-icon_checked"></i>
+                            </div>
+                            <div class="baie-cell__bd">
+                                <p>standard is dealt for u.</p>
+                            </div>
+                        </label>
+                        <label class="baie-cell baie-check__label" for="s12">
+                            <div class="baie-cell__hd">
+                                <input type="checkbox" name="checkbox1" class="baie-check" id="s12">
+                                <i class="baie-icon_checked"></i>
+                            </div>
+                            <div class="baie-cell__bd">
+                                <p>standard is dealicient for u.</p>
+                            </div>
+                        </label>
+                        <a href="javascript:;" class="baie-cell baie-cell_link">
+                            <div class="baie-cell__bd">添加更多</div>
+                        </a>
+                    </div>
+
+                    <pre><code>
+    &lt;div class="baie-cells baie-cells_checkbox"&gt;
+        &lt;label class="baie-cell baie-check__label" for="s11"&gt;
+            &lt;div class="baie-cell__hd"&gt;
+                &lt;input type="checkbox" class="baie-check" name="checkbox1" id="s11" checked="checked"&gt;
+                &lt;i class="baie-icon_checked"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;p&gt;standard is dealt for u.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/label&gt;
+
+        &lt;label class="baie-cell baie-check__label" for="s12"&gt;
+            &lt;div class="baie-cell__hd"&gt;
+                &lt;input type="checkbox" name="checkbox1" class="baie-check" id="s12"&gt;
+                &lt;i class="baie-icon_checked"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;p&gt;standard is dealicient for u.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/label&gt;
+
+        &lt;a href="javascript:;" class="baie-cell baie-cell_link"&gt;
+            &lt;div class="baie-cell__bd"&gt;添加更多&lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+</code></pre>
+
+                    <h2>表单</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-cells_form</code></td>
+                                <td>父元素，定义表单。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-label</code></td>
+                                <td>设置label样式。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-input</code></td>
+                                <td>设置文本框样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-textarea</code></td>
+                                <td>设置文本域样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-check</code></td>
+                                <td>绝对定位，隐藏单选按钮</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell_vcode</code></td>
+                                <td>父元素，消除上下右内边距</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-vcode-btn</code></td>
+                                <td>设置获取验证码样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-vcode-img</code></td>
+                                <td>设置验证码图片样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell_warn</code></td>
+                                <td>父元素，设置报错时label字体样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-icon_warn</code></td>
+                                <td>设置警告图标样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell_switch</code></td>
+                                <td>父元素，调整上下内边距</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-switch</code></td>
+                                <td>设置切换按钮样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell_select</code></td>
+                                <td>父元素，调整内边距</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell_select-before</code></td>
+                                <td>父元素，设置select居前的样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-cell_select-after</code></td>
+                                <td>父元素，设置select居后的样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-select</code></td>
+                                <td>调整select的样式</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-cells baie-cells_form">
+                        <div class="baie-cell baie-cell_avatar baie-cell_access">
+                            <div class="baie-cell__bd">头像</div>
+                            <div class="baie-cell__ft">
+                                <img src="/assets/images/avatar.png" alt="" class="baie-cell_avatar-img"/>
+                            </div>
+                        </div>
+                        <div class="baie-cell">
+                            <div class="baie-cell__hd"><label class="baie-label">qq</label></div>
+                            <div class="baie-cell__bd">
+                                <input class="baie-input" type="number" pattern="[0-9]*" placeholder="请输入qq号">
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_vcode">
+                            <div class="baie-cell__hd">
+                                <label class="baie-label">手机号</label>
+                            </div>
+                            <div class="baie-cell__bd">
+                                <input class="baie-input" type="tel" placeholder="请输入手机号">
+                            </div>
+                            <div class="baie-cell__ft">
+                                <a href="javascript:;" class="baie-vcode-btn">获取验证码</a>
+                            </div>
+                        </div>
+                        <div class="baie-cell">
+                            <div class="baie-cell__hd"><label for="" class="baie-label">日期</label></div>
+                            <div class="baie-cell__bd">
+                                <input class="baie-input" type="date" value="">
+                            </div>
+                        </div>
+                        <div class="baie-cell">
+                            <div class="baie-cell__hd"><label for="" class="baie-label">时间</label></div>
+                            <div class="baie-cell__bd">
+                                <input class="baie-input" type="datetius-local" value="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_vcode">
+                            <div class="baie-cell__hd"><label class="baie-label">验证码</label></div>
+                            <div class="baie-cell__bd">
+                                <input class="baie-input" type="number" placeholder="请输入验证码">
+                            </div>
+                            <div class="baie-cell__ft">
+                                <img class="baie-vcode-img" src="/assets/images/vcode.jpg">
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_warn">
+                            <div class="baie-cell__hd"><label for="" class="baie-label">卡号</label></div>
+                            <div class="baie-cell__bd">
+                                <input class="baie-input" type="number" pattern="[0-9]*" placeholder="请输入卡号">
+                            </div>
+                            <div class="baie-cell__ft">
+                                <i class="baie-icon_warn"></i>
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_switch">
+                            <div class="baie-cell__bd">启用</div>
+                            <div class="baie-cell__ft">
+                                <input class="baie-switch" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_select baie-cell_select-before">
+                            <div class="baie-cell__hd">
+                                <select class="baie-select" name="select2">
+                                    <option value="1">+86</option>
+                                    <option value="2">+80</option>
+                                    <option value="3">+84</option>
+                                    <option value="4">+87</option>
+                                </select>
+                            </div>
+                            <div class="baie-cell__bd">
+                                <input class="baie-input" type="number" pattern="[0-9]*" placeholder="请输入号码">
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_select baie-cell_select-after">
+                            <div class="baie-cell__hd">
+                                <label class="baie-label">国家</label>
+                            </div>
+                            <div class="baie-cell__bd">
+                                <select class="baie-select" name="select2">
+                                    <option value="1">中国</option>
+                                    <option value="2">美国</option>
+                                    <option value="3">英国</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_select">
+                            <div class="baie-cell__bd">
+                                <select class="baie-select" name="select1">
+                                    <option value="">这是选择框</option>
+                                    <option value="1">微信号</option>
+                                    <option value="2">QQ号</option>
+                                    <option value="3">Email</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="baie-cell">
+                            <div class="baie-cell__bd">
+                                <input class="baie-input" type="text" placeholder="这是文本框">
+                            </div>
+                        </div>
+                        <div class="baie-cell">
+                            <div class="baie-cell__bd">
+                                <textarea class="baie-textarea" placeholder="这是文本域" rows="3"></textarea>
+                                <div class="baie-textarea-counter"><span>0</span>/200</div>
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_textarea">
+                            <div class="baie-cell__hd"><label class="baie-label">心得</label></div>
+                            <div class="baie-cell__bd">
+                                <textarea class="baie-textarea" placeholder="这是文本域"></textarea>
+                                <div class="baie-textarea-counter"><span>0</span>/200</div>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="baieAgree" class="baie-agree">
+                        <input id="baieAgree" type="checkbox" class="baie-agree__checkbox">
+                        <span class="baie-agree__text">
+                            阅读并同意<a href="javascript:;">《相关条款》</a>
+                        </span>
+                    </label>
+                    <div class="baie-btn-area">
+                        <a class="baie-btn baie-btn_orange" href="javascript:">确定</a>
+                    </div>
+
+                    <pre class="us-scrollable-text"><code>
+    &lt;div class="baie-cells baie-cells_form"&gt;
+        &lt;div class="baie-cell baie-cell_access"&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;label class="baie-label"&gt;头像&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="baie-cell__ft"&gt;
+                &lt;img src="/assets/images/avatar.png" alt="" class="baie-cell_avatar"/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell"&gt;
+            &lt;div class="baie-cell__hd"&gt;&lt;label class="baie-label"&gt;qq&lt;/label&gt;&lt;/div&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;input class="baie-input" type="number" pattern="[0-9]*" placeholder="请输入qq号"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell baie-cell_vcode"&gt;
+            &lt;div class="baie-cell__hd"&gt;
+                &lt;label class="baie-label"&gt;手机号&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;input class="baie-input" type="tel" placeholder="请输入手机号"&gt;
+            &lt;/div&gt;
+            &lt;div class="baie-cell__ft"&gt;
+                &lt;a href="javascript:;" class="baie-vcode-btn"&gt;获取验证码&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell"&gt;
+            &lt;div class="baie-cell__hd"&gt;&lt;label for="" class="baie-label"&gt;日期&lt;/label&gt;&lt;/div&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;input class="baie-input" type="date" value=""&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell"&gt;
+            &lt;div class="baie-cell__hd"&gt;&lt;label for="" class="baie-label"&gt;时间&lt;/label&gt;&lt;/div&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;input class="baie-input" type="datetius-local" value="" placeholder=""&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell baie-cell_vcode"&gt;
+            &lt;div class="baie-cell__hd"&gt;&lt;label class="baie-label"&gt;验证码&lt;/label&gt;&lt;/div&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;input class="baie-input" type="number" placeholder="请输入验证码"&gt;
+            &lt;/div&gt;
+            &lt;div class="baie-cell__ft"&gt;
+                &lt;img class="baie-vcode-img" src="/assets/images/vcode.jpg"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell baie-cell_warn"&gt;
+            &lt;div class="baie-cell__hd"&gt;&lt;label for="" class="baie-label"&gt;卡号&lt;/label&gt;&lt;/div&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;input class="baie-input" type="number" pattern="[0-9]*" value="baie input error" placeholder="请输入卡号"&gt;
+            &lt;/div&gt;
+            &lt;div class="baie-cell__ft"&gt;
+                &lt;i class="baie-icon_warn"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell baie-cell_switch"&gt;
+            &lt;div class="baie-cell__bd"&gt;启用&lt;/div&gt;
+            &lt;div class="baie-cell__ft"&gt;
+                &lt;input class="baie-switch" type="checkbox"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell baie-cell_select baie-cell_select-after"&gt;
+            &lt;div class="baie-cell__hd"&gt;
+                &lt;label class="baie-label"&gt;国家/地区&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;select class="baie-select" name="select2"&gt;
+                    &lt;option value="1"&gt;中国&lt;/option&gt;
+                    &lt;option value="2"&gt;美国&lt;/option&gt;
+                    &lt;option value="3"&gt;英国&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell baie-cell_select"&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;select class="baie-select" name="select1"&gt;
+                    &lt;option value=""&gt;这是选择框&lt;/option&gt;
+                    &lt;option value="1"&gt;微信号&lt;/option&gt;
+                    &lt;option value="2"&gt;QQ号&lt;/option&gt;
+                    &lt;option value="3"&gt;Email&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell baie-cell_select baie-cell_select-before"&gt;
+            &lt;div class="baie-cell__hd"&gt;
+                &lt;select class="baie-select" name="select2"&gt;
+                    &lt;option value="1"&gt;+86&lt;/option&gt;
+                    &lt;option value="2"&gt;+80&lt;/option&gt;
+                    &lt;option value="3"&gt;+84&lt;/option&gt;
+                    &lt;option value="4"&gt;+87&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;input class="baie-input" type="number" pattern="[0-9]*" placeholder="请输入号码"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell"&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;input class="baie-input" type="text" placeholder="这是文本框"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-cell"&gt;
+            &lt;div class="baie-cell__bd"&gt;
+                &lt;textarea class="baie-textarea" placeholder="这是文本域" rows="3"&gt;&lt;/textarea&gt;
+                &lt;div class="baie-textarea-counter"&gt;&lt;span&gt;0&lt;/span&gt;/200&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;label for="baieAgree" class="baie-agree"&gt;
+            &lt;input id="baieAgree" type="checkbox" class="baie-agree__checkbox"&gt;
+            &lt;span class="baie-agree__text"&gt;
+                阅读并同意
+                &lt;a href="javascript:;"&gt;《相关条款》&lt;/a&gt;
+            &lt;/span&gt;
+        &lt;/label&gt;
+
+        &lt;div class="baie-btn-area"&gt;
+            &lt;a class="baie-btn baie-btn_orange" href="javascript:"&gt;确定&lt;/a&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+</code></pre>
+
+                </article>
+
+                <!-- 文章 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="article">文章</h1>
+
+                    <h2>用法</h2>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-article</code></td>
+                                <td>父元素，创建容器</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <article class="baie-article">
+                        <h1>大标题</h1>
+                        <section>
+                            <h2>章标题</h2>
+                            <section>
+                                <h3>1.1 节标题</h3>
+                                <p>
+                                    青瓦台发言人郑然国当天表示，在秋美爱的提议下，青瓦台方面期待此次对话将有利于恢复政局稳定、促进国政正常运行，但秋美爱单方面通告称取消会面计划，令人感到遗憾。今后仍将期待随时举行总统和政党党首参与的“领袖会谈”，希望在野党也能为恢复国政采取负责任的态度。
+                                </p>
+                            </section>
+                            <section>
+                                <h3>1.2 节标题</h3>
+                                <p>
+                                    候任总统特朗普在选举时曾经宣称，允许日本等国持有核武器，但日前他又在自己的社交网站上写道“未曾说过”。日本NHK电视台11月14日就此猜测认为，特朗普有可能已收回自己以前的发言。
+                                </p>
+                            </section>
+                        </section>
+                    </article>
+
+                    <pre><code>
+    &lt;article class="baie-article"&gt;
+        &lt;h1&gt;大标题&lt;/h1&gt;
+        &lt;section&gt;
+            &lt;h2&gt;章标题&lt;/h2&gt;
+            &lt;section&gt;
+                &lt;h3&gt;1.1 节标题&lt;/h3&gt;
+                &lt;p&gt;...&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+                &lt;h3&gt;1.2 节标题&lt;/h3&gt;
+                &lt;p&gt;...&lt;/p&gt;
+            &lt;/section&gt;
+        &lt;/section&gt;
+    &lt;/article&gt;
+</code></pre>
+
+                </article>
+
+                <!-- 按钮 -->
+                <article class="us-article">
+                    <h1 class="us-article-title" id="button">按钮</h1>
+
+                    <h2>操作按钮</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-btn</code></td>
+                                <td>基础样式。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_default</code></td>
+                                <td>灰色。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_primary</code></td>
+                                <td>绿色。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_warn</code></td>
+                                <td>红色。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_orange</code></td>
+                                <td>橙色。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_disabled</code></td>
+                                <td>禁用状态。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <p>
+                        <a href="javascript:;" class="baie-btn baie-btn_default">页面次要操作 Normal</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_default baie-btn_disabled">页面次要操作 Disabled</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_primary">页面主操作 Normal</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_primary baie-btn_disabled">页面主操作 Disabled</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_warn">警告类操作 Normal</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_warn baie-btn_disabled">警告类操作 Disabled</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_orange">自定义橙色 Normal</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_orange baie-btn_disabled">自定义橙色 Disabled</a>
+                    </p>
+                    <pre><code>
+    &lt;a href="javascript:;" class="baie-btn baie-btn_primary"&gt;页面主操作 Normal&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_primary baie-btn_disabled"&gt;页面主操作 Disabled&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_default"&gt;页面次要操作 Normal&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_default baie-btn_disabled "&gt;页面次要操作 Disabled&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_warn"&gt;警告类操作 Normal&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_disabled baie-btn_warn"&gt;警告类操作 Disabled&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_orange"&gt;自定义橙色 Normal&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_orange baie-btn_disabled"&gt;自定义橙色 Disabled&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_gray"&gt;自定义橙色 Normal&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_gray baie-btn_disabled"&gt;自定义橙色 Disabled&lt;/a&gt;
+</code></pre>
+
+                    <h2>空心按钮</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-btn</code></td>
+                                <td>基础样式。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_plain-default</code></td>
+                                <td>灰色空心。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_plain-primary</code></td>
+                                <td>绿色空心。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_plain-orange</code></td>
+                                <td>橙色空心。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_plain-disabled</code></td>
+                                <td>禁用状态。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <p>
+                        <a href="javascript:;" class="baie-btn baie-btn_plain-default">按钮</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_plain-default baie-btn_plain-disabled">按钮</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_plain-primary">按钮</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_plain-primary baie-btn_plain-disabled">按钮</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_plain-orange">按钮</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_plain-orange baie-btn_plain-disabled">按钮</a>
+                    </p>
+
+                    <pre><code>
+    &lt;a href="javascript:;" class="baie-btn baie-btn_plain-default"&gt;按钮&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_plain-default baie-btn_plain-disabled"&gt;按钮&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_plain-primary"&gt;按钮&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_plain-primary baie-btn_plain-disabled"&gt;按钮&lt;/a&gt;
+</code></pre>
+
+                    <h2>小按钮</h2>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-btn</code></td>
+                                <td>基础样式。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn_mini</code></td>
+                                <td>按钮大小。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <p>
+                        <a href="javascript:;" class="baie-btn baie-btn_primary baie-btn_mini">按钮</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_default baie-btn_mini">按钮</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_warn baie-btn_mini">按钮</a>
+                        <a href="javascript:;" class="baie-btn baie-btn_orange baie-btn_mini">按钮</a>
+                    </p>
+
+                    <pre><code>
+    &lt;a href="javascript:;" class="baie-btn baie-btn_primary baie-btn_mini"&gt;按钮&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_default baie-btn_mini"&gt;按钮&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_warn baie-btn_mini"&gt;按钮&lt;/a&gt;
+    &lt;a href="javascript:;" class="baie-btn baie-btn_orange baie-btn_mini"&gt;按钮&lt;/a&gt;
+</code></pre>
+
+                </article>
+
+                <!-- 选项卡 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="tab">选项卡</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class类</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-tab</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-tabbar</code></td>
+                                <td>子元素，标签栏。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-tabbox</code></td>
+                                <td>子元素，内容盒。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-tabcon</code></td>
+                                <td>次子元素，内容块。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.active</code></td>
+                                <td>活动状态。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <p>
+                    <div class="baie-tab">
+                        <ul class="baie-tabbar">
+                            <li class="active"><a href="javascript:;">主页</a></li>
+                            <li><a href="javascript:;">原创</a></li>
+                            <li><a href="javascript:;">活动</a></li>
+                            <li><a href="javascript:;">品牌</a></li>
+                        </ul>
+
+                        <div class="baie-tabbox">
+                            <div class="baie-tabcon active">这是主页的内容</div>
+                            <div class="baie-tabcon">这是原创的内容</div>
+                            <div class="baie-tabcon">这是活动的内容</div>
+                            <div class="baie-tabcon">这是品牌的内容</div>
+                        </div>
+                    </div>
+                    </p>
+
+                    <pre><code>
+    &lt;div class="baie-tab"&gt;
+        &lt;ul class="baie-tabbar"&gt;
+            &lt;li class="active"&gt;&lt;a href="javascript:;"&gt;主页&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascript:;"&gt;原创&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascript:;"&gt;活动&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascript:;"&gt;品牌&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;div class="baie-tabbox"&gt;
+            &lt;div class="baie-tabcon active"&gt;这是主页的内容&lt;/div&gt;
+            &lt;div class="baie-tabcon"&gt;这是原创的内容&lt;/div&gt;
+            &lt;div class="baie-tabcon"&gt;这是活动的内容&lt;/div&gt;
+            &lt;div class="baie-tabcon"&gt;这是品牌的内容&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+                    <p>
+                    <ul class="baie-tabbar baie-tabbar_s1">
+                        <li class="active"><a href="javascript:;">自由积分</a></li>
+                        <li><a href="javascript:;">一阶积分</a></li>
+                        <li><a href="javascript:;">二阶积分</a></li>
+                        <li><a href="javascript:;">分类<i class="baie-icon_chevron-down baie-icon_dropdown"></i></a></li>
+                    </ul>
+                    </p>
+
+                    <pre><code>
+    &lt;ul class="baie-tabbar baie-tabbar_s1"&gt;
+        &lt;li class="active"&gt;&lt;a href="javascript:;"&gt;主页&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt;原创&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt;活动&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt;分类&lt;i class="baie-icon_chevron-down baie-icon_dropdown"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+</code></pre>
+                    <p>
+                    <ul class="baie-tabbar baie-tabbar_s2">
+                        <li class="active"><a href="javascript:;">主页</a></li>
+                        <li><a href="javascript:;">原创</a></li>
+                        <li><a href="javascript:;">活动</a></li>
+                        <li><a href="javascript:;">品牌</a></li>
+                        <li><a href="javascript:;">口碑</a></li>
+                    </ul>
+                    </p>
+                    <pre><code>
+    &lt;ul class="baie-tabbar baie-tabbar_s2"&gt;
+        &lt;li class="active"&gt;&lt;a href="javascript:;"&gt;主页&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt;原创&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt;活动&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt;品牌&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt;口碑&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+</code></pre>
+
+                </article>
+
+                <!-- 工具栏 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="toolbar">工具栏</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class类</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-toolbar</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-toolbar_h</code></td>
+                                <td>父元素，水平排列。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-toolbar__item</code></td>
+                                <td>子元素，设置样式。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.active</code></td>
+                                <td>子元素，活动状态。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-toolbar_label</code></td>
+                                <td>次子元素，标签。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-toolbar" style="position: static">
+                        <a href="javascript:;" class="baie-toolbar__item active">
+                            <p class="baie-toolbar_label">微信</p>
+                        </a>
+                        <a href="javascript:;" class="baie-toolbar__item">
+                            <p class="baie-toolbar_label">通讯录</p>
+                        </a>
+                        <a href="javascript:;" class="baie-toolbar__item">
+                            <p class="baie-toolbar_label">发现</p>
+                        </a>
+                        <a href="javascript:;" class="baie-toolbar__item">
+                            <p class="baie-toolbar_label">我</p>
+                        </a>
+                    </div>
+                    <pre><code>
+    &lt;div class="baie-toolbar"&gt;
+        &lt;a href="javascript:;" class="baie-toolbar__item active"&gt;
+            &lt;p class="baie-toolbar_label"&gt;微信&lt;/p&gt;
+        &lt;/a&gt;
+        &lt;a href="javascript:;" class="baie-toolbar__item"&gt;
+            &lt;p class="baie-toolbar_label"&gt;通讯录&lt;/p&gt;
+        &lt;/a&gt;
+        &lt;a href="javascript:;" class="baie-toolbar__item"&gt;
+            &lt;p class="baie-toolbar_label"&gt;发现&lt;/p&gt;
+        &lt;/a&gt;
+        &lt;a href="javascript:;" class="baie-toolbar__item"&gt;
+            &lt;p class="baie-toolbar_label"&gt;我&lt;/p&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+</code></pre>
+
+                    <div class="baie-toolbar baie-toolbar_h" style="position: static">
+                        <a href="javascript:;" class="baie-toolbar__item active">
+                            <p class="baie-toolbar_label">微信</p>
+                        </a>
+                        <a href="javascript:;" class="baie-toolbar__item">
+                            <p class="baie-toolbar_label">通讯录</p>
+                        </a>
+                        <a href="javascript:;" class="baie-toolbar__item">
+                            <p class="baie-toolbar_label">发现</p>
+                        </a>
+                        <a href="javascript:;" class="baie-toolbar__item">
+                            <p class="baie-toolbar_label">我</p>
+                        </a>
+                    </div>
+                    <pre><code>
+    &lt;div class="baie-toolbar baie-toolbar_h"&gt;
+        ...
+    &lt;/div&gt;
+</code></pre>
+
+                </article>
+
+                <!-- 导航栏 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="navbar">导航栏</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class类</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-nav</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-navbar</code></td>
+                                <td>子元素，导航栏。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-navbar__item</code></td>
+                                <td>次子元素，导航栏项。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-navbar__item_on</code></td>
+                                <td>次子元素，导航栏项活动状态。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-nav__panel</code></td>
+                                <td>子元素，导航对应内容。</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-nav">
+                        <div class="baie-navbar">
+                            <div class="baie-navbar__item baie-navbar__item_on">
+                                选项一
+                            </div>
+                            <div class="baie-navbar__item">
+                                选项二
+                            </div>
+                            <div class="baie-navbar__item">
+                                选项三
+                            </div>
+                        </div>
+                        <div class="baie-nav__panel">
+                        </div>
+                    </div>
+
+                    <pre><code>
+    &lt;div class="baie-nav"&gt;
+        &lt;div class="baie-navbar"&gt;
+            &lt;div class="baie-navbar__item baie-navbar__item_on"&gt;
+                选项一
+            &lt;/div&gt;
+            &lt;div class="baie-navbar__item"&gt;
+                选项二
+            &lt;/div&gt;
+            &lt;div class="baie-navbar__item"&gt;
+                选项三
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-nav__panel"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+
+                </article>
+
+                <!-- 搜索栏 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="searchbar">搜索栏</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class类</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-search-bar</code></td>
+                                <td>父元素，创建容器</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-search-bar__form</code></td>
+                                <td>子元素，设置form样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-search-bar__box</code></td>
+                                <td>次子元素，设置搜索框样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-search-bar__input</code></td>
+                                <td>次次子元素，设置搜索表单样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-icon_clear</code></td>
+                                <td>次次子元素，设置清除按钮样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-search-bar__label</code></td>
+                                <td>次子元素，设置label层样式，绝对定位在最顶层，点击后消失</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-icon_search</code></td>
+                                <td>次次子元素，设置搜索图标样式</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-search-bar__cancel-btn</code></td>
+                                <td>子元素，设置取消搜索按钮样式</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-search-bar" id="searchBar">
+                        <form class="baie-search-bar__form">
+                            <div class="baie-search-bar__box">
+                                <i class="baie-icon_search"></i>
+                                <input type="search" class="baie-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                                <a href="javascript:" class="baie-icon_clear" id="searchClear"></a>
+                            </div>
+                            <label class="baie-search-bar__label" id="searchText">
+                                <i class="baie-icon_search"></i>
+                                <span>搜索</span>
+                            </label>
+                        </form>
+                        <a href="javascript:" class="baie-search-bar__cancel-btn" id="searchCancel">取消</a>
+                    </div>
+                    <div class="baie-cells searchbar-result" id="searchResult" style="display: none">
+                        <div class="baie-cell baie-cell_access">
+                            <div class="baie-cell__bd baie-cell_primary">
+                                <p>实时搜索文本</p>
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_access">
+                            <div class="baie-cell__bd baie-cell_primary">
+                                <p>实时搜索文本</p>
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_access">
+                            <div class="baie-cell__bd baie-cell_primary">
+                                <p>实时搜索文本</p>
+                            </div>
+                        </div>
+                        <div class="baie-cell baie-cell_access">
+                            <div class="baie-cell__bd baie-cell_primary">
+                                <p>实时搜索文本</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <pre><code>
+    &lt;div class="baie-search-bar" id="searchBar"&gt;
+        &lt;form class="baie-search-bar__form"&gt;
+            &lt;div class="baie-search-bar__box"&gt;
+                &lt;i class="baie-icon_search"&gt;&lt;/i&gt;
+                &lt;input type="search" class="baie-search-bar__input" id="searchInput" placeholder="搜索" required=""&gt;
+                &lt;a href="javascript:" class="baie-icon_clear" id="searchClear"&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;label class="baie-search-bar__label" id="searchText"&gt;
+                &lt;i class="baie-icon_search"&gt;&lt;/i&gt;
+                &lt;span&gt;搜索&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/form&gt;
+        &lt;a href="javascript:" class="baie-search-bar__cancel-btn" id="searchCancel"&gt;取消&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class="baie-cells searchbar-result" id="searchResult" style="display: none"&gt;
+        &lt;div class="baie-cell baie-cell_access"&gt;
+            &lt;div class="baie-cell__bd baie-cell_primary"&gt;
+                &lt;p&gt;实时搜索文本&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-cell baie-cell_access"&gt;
+            &lt;div class="baie-cell__bd baie-cell_primary"&gt;
+                &lt;p&gt;实时搜索文本&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-cell baie-cell_access"&gt;
+            &lt;div class="baie-cell__bd baie-cell_primary"&gt;
+                &lt;p&gt;实时搜索文本&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="baie-cell baie-cell_access"&gt;
+            &lt;div class="baie-cell__bd baie-cell_primary"&gt;
+                &lt;p&gt;实时搜索文本&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+
+                </article>
+
+                <!-- 搜索框 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="search">搜索框</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class类</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-search</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-search__input</code></td>
+                                <td>子元素，输入框。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-search__icon</code></td>
+                                <td>子元素，图标。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+                    <p>
+                    <div class="baie-search">
+                        <span class="baie-search__icon"></span>
+                        <input type="text" name="phone" placeholder="请输入经销商手机号" class="baie-search__input">
+                    </div>
+                    </p>
+
+                    <pre><code>
+    &lt;div class="baie-search"&gt;
+        &lt;span class="baie-search__icon"&gt;&lt;/span&gt;
+        &lt;input type="text" name="phone" placeholder="请输入经销商手机号" class="baie-search__input"&gt;
+    &lt;/div&gt;
+</code></pre>
+
+                </article>
+
+                <!-- 提示页 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="msg">提示页</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class类</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.baie-msg</code></td>
+                                <td>父元素，创建容器。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-msg__icon-area</code></td>
+                                <td>子元素，图标。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-msg__text-area</code></td>
+                                <td>子元素，文本。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-msg__title</code></td>
+                                <td>次子元素，标题。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-msg__desc</code></td>
+                                <td>次子元素，描述。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-msg__opr-area</code></td>
+                                <td>子元素，按钮。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-btn-area</code></td>
+                                <td>次子元素，按钮外层，调整外边距。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-msg__extra-area</code></td>
+                                <td>子元素，附加区域。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <div class="baie-msg">
+                        <div class="baie-msg__icon-area"><i class="baie-icon_success baie-icon_msg"></i></div>
+                        <div class="baie-msg__text-area">
+                            <h2 class="baie-msg__title">操作成功</h2>
+                            <p class="baie-msg__desc">内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a href="javascript:;">文字链接</a></p>
+                        </div>
+                        <div class="baie-msg__opr-area">
+                            <p class="baie-btn-area">
+                                <a href="javascript:;" class="baie-btn baie-btn_orange">推荐操作</a>
+                                <a href="javascript:;" class="baie-btn baie-btn_default">辅助操作</a>
+                            </p>
+                        </div>
+                        <div class="baie-msg__extra-area">
+                            <a href="javascript:;">其它操作</a>
+                        </div>
+                    </div>
+
+                    <pre><code>
+    &lt;div class="baie-msg"&gt;
+        &lt;div class="baie-msg__icon-area"&gt;
+            &lt;i class="baie-icon_success baie-icon_msg"&gt;&lt;/i&gt;  //操作失败图标 → baie-icon_warn
+        &lt;/div&gt;.
+
+        &lt;div class="baie-msg__text-area"&gt;
+            &lt;h2 class="baie-msg__title"&gt;操作成功&lt;/h2&gt;
+            &lt;p class="baie-msg__desc"&gt;内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现&lt;a href="javascript:;"&gt;文字链接&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-msg__opr-area"&gt;
+            &lt;p class="baie-btn-area"&gt;
+                &lt;a href="javascript:;" class="baie-btn baie-btn_orange"&gt;推荐操作&lt;/a&gt;
+                &lt;a href="javascript:;" class="baie-btn baie-btn_default"&gt;辅助操作&lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="baie-msg__extra-area"&gt;
+            &lt;a href="javascript:;"&gt;其它操作&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+                </article>
+
+                <!-- 提示框 -->
+                <article class="us-article">
+
+                    <h1 class="us-article-title" id="toast">提示框</h1>
+
+                    <h3 class="tm-article-subtitle">用法</h3>
+
+                    <div class="us-overflow-container">
+                        <table class="us-table">
+                            <thead>
+                            <tr>
+                                <th>Class类</th>
+                                <th>描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>无</code></td>
+                                <td>父元素，脚本作用层。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-mask</code></td>
+                                <td>子元素，遮罩层，黑色半透明。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-mask-white</code></td>
+                                <td>子元素，遮罩层，白色半透明。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-mask-gray</code></td>
+                                <td>子元素，遮罩层，灰色半透明。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-mask_transparent</code></td>
+                                <td>子元素，遮罩层，透明。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-toast</code></td>
+                                <td>子元素，弹出框。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-icon_toast</code></td>
+                                <td>次子元素，图标。</td>
+                            </tr>
+                            <tr>
+                                <td><code>.baie-toast__content</code></td>
+                                <td>次子元素，文本。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="tm-article-subtitle">示例</h3>
+
+                    <p>
+                        <div id="donetToast" style="margin-bottom: 10px;">
+                            <div class="baie-mask_transparent" style="display: none;"></div>
+                            <div class="baie-toast" style="position:static;display:inline-block;margin-left: 0;">
+                                <i class="baie-icon_choose_w baie-icon_toast"></i>
+                    <p class="baie-toast__content">已完成</p>
+            </div>
+        </div>
+        <div id="loadingToast">
+            <div class="baie-mask_transparent" style="display: none;"></div>
+            <div class="baie-toast" style="position:static;display:inline-block;margin-left: 0;">
+                <i class="baie-loading baie-icon_toast"></i>
+                <p class="baie-toast__content">数据加载中</p>
+            </div>
+        </div>
+        </p>
+
+
+        <pre><code>
+    &lt;div id="toast"&gt;
+        &lt;div class="baie-mask_transparent"&gt;&lt;/div&gt;
+        &lt;div class="baie-toast"&gt;
+            &lt;i class="baie-icon_success-no-circle baie-icon_toast"&gt;&lt;/i&gt;
+            &lt;p class="baie-toast__content"&gt;已完成&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id="loadingToast"&gt;
+        &lt;div class="baie-mask_transparent"&gt;&lt;/div&gt;
+        &lt;div class="baie-toast"&gt;
+            &lt;i class="baie-loading baie-icon_toast"&gt;&lt;/i&gt;
+            &lt;p class="baie-toast__content"&gt;数据加载中&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+        </article>
+
+        <!-- 弹出窗 -->
+        <article class="us-article">
+
+            <h1 class="us-article-title" id="dialog">弹出窗</h1>
+
+            <h3 class="tm-article-subtitle">用法</h3>
+
+            <div class="us-overflow-container">
+                <table class="us-table">
+                    <thead>
+                    <tr>
+                        <th>Class类</th>
+                        <th>描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>.js_dialog</code></td>
+                        <td>父元素，脚本控制显示隐藏。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-mask</code></td>
+                        <td>子元素，遮罩层。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-dialog</code></td>
+                        <td>子元素，弹出窗。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-dialog__hd</code></td>
+                        <td>次子元素，头部，标题。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-dialog__bd</code></td>
+                        <td>次子元素，主体，描述。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-dialog__ft</code></td>
+                        <td>次子元素，尾部，按钮。</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="tm-article-subtitle">示例</h3>
+
+            <p>
+            <div class="js_dialog" id="dialog1" style="opacity: 1; position: relative;height: 300px;">
+                <div class="baie-mask" style="position: absolute;height: 100%;"></div>
+                <div class="baie-dialog" style="position: absolute">
+                    <div class="baie-dialog__bd short">确认删除该商品？</div>
+                    <div class="baie-dialog__ft">
+                        <a href="javascript:;" class="baie-dialog__btn baie-dialog__btn_default">取消</a>
+                        <a href="javascript:;" class="baie-dialog__btn baie-dialog__btn_primary">确认</a>
+                    </div>
+                </div>
+            </div>
+            </p>
+            <pre><code>
+    &lt;div class="js_dialog" id="dialog1"&gt;
+        &lt;div class="baie-mask"&gt;&lt;/div&gt;
+        &lt;div class="baie-dialog"&gt;
+            &lt;div class="baie-dialog__bd"&gt;确认删除该商品？&lt;/div&gt;
+            &lt;div class="baie-dialog__ft"&gt;
+                &lt;a href="javascript:;" class="baie-dialog__btn baie-dialog__btn_default"&gt;取消&lt;/a&gt;
+                &lt;a href="javascript:;" class="baie-dialog__btn baie-dialog__btn_primary"&gt;确认&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+            <p>
+            <div class="js_dialog" id="dialog2" style="opacity: 1; position: relative;height: 300px;">
+                <div class="baie-mask" style="position: absolute;height: 100%;"></div>
+                <div class="baie-dialog" style="position: absolute">
+                    <div class="baie-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+                    <div class="baie-dialog__ft">
+                        <a href="javascript:;" class="baie-dialog__btn baie-dialog__btn_default">知道了</a>
+                    </div>
+                </div>
+            </div>
+            </p>
+
+
+            <pre><code>
+    &lt;div class="js_dialog" id="dialog2"&gt;
+        &lt;div class="baie-mask"&gt;&lt;/div&gt;
+        &lt;div class="baie-dialog"&gt;
+            &lt;div class="baie-dialog__bd"&gt;弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内&lt;/div&gt;
+            &lt;div class="baie-dialog__ft"&gt;
+                &lt;a href="javascript:;" class="baie-dialog__btn baie-dialog__btn_default"&gt;知道了&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
+        </article>
+
+        <!-- 查看大图 -->
+        <article class="us-article">
+
+            <h1 class="us-article-title" id="gallery">查看大图</h1>
+
+            <h3 class="tm-article-subtitle">用法</h3>
+
+            <div class="us-overflow-container">
+                <table class="us-table">
+                    <thead>
+                    <tr>
+                        <th>Class类</th>
+                        <th>描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>.baie-viewer</code></td>
+                        <td>父元素，创建容器。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-viewer__box</code></td>
+                        <td>子元素，图片外层。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-viewer__close</code></td>
+                        <td>子元素，关闭按钮。</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="tm-article-subtitle">示例</h3>
+
+            <div class="baie-viewer" style="position:static; height: 600px;">
+                <div class="baie-viewer__box">
+                    <img src="/assets/images/viewer_pic_1.png" alt="">
+                </div>
+
+                <div class="baie-viewer__close"></div>
+            </div>
+
+            <pre><code>
+&lt;div class="baie-viewer"&gt;
+    &lt;div class="baie-viewer__box"&gt;
+        &lt;img src="/assets/images/viewer_pic_1.png" alt=""&gt;
+    &lt;/div&gt;
+    &lt;div class="baie-viewer__close"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+        </article>
+
+        <!-- 加载更多 -->
+        <article class="us-article">
+
+            <h1 class="us-article-title" id="loadmore">加载更多</h1>
+
+            <h3 class="tm-article-subtitle">用法</h3>
+
+            <div class="us-overflow-container">
+                <table class="us-table">
+                    <thead>
+                    <tr>
+                        <th>Class类</th>
+                        <th>描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>.baie-loadmore</code></td>
+                        <td>父元素，创建容器。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-loadmore__icon</code></td>
+                        <td>子元素，图标。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-loadmore__tips</code></td>
+                        <td>子元素，提示。</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="tm-article-subtitle">示例</h3>
+
+            <div class="baie-loadmore">
+                <i class="baie-loadmore__icon"></i>
+                <span class="baie-loadmore__tips">正在加载</span>
+            </div>
+            <div class="baie-loadmore baie-loadmore_line">
+                <span class="baie-loadmore__tips">暂无数据</span>
+            </div>
+            <div class="baie-loadmore baie-loadmore_line baie-loadmore_dot">
+                <span class="baie-loadmore__tips"></span>
+            </div>
+
+            <pre><code>
+&lt;div class="baie-loadmore"&gt;
+    &lt;i class="baie-loadmore__icon"&gt;&lt;/i&gt;
+    &lt;span class="baie-loadmore__tips"&gt;正在加载&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="baie-loadmore baie-loadmore_line"&gt;
+    &lt;span class="baie-loadmore__tips"&gt;暂无数据&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="baie-loadmore baie-loadmore_line baie-loadmore_dot"&gt;
+    &lt;span class="baie-loadmore__tips"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <hr class="us-article-divider">
+
+
+        </article>
+
+        <!-- 下拉菜单 -->
+        <article class="us-article">
+
+            <h1 class="us-article-title" id="dropdown">下拉菜单</h1>
+
+            <h3 class="tm-article-subtitle">用法</h3>
+
+            <div class="us-overflow-container">
+                <table class="us-table">
+                    <thead>
+                    <tr>
+                        <th>Class类</th>
+                        <th>描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>.baie-dropdown</code></td>
+                        <td>父元素，创建容器。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.active</code></td>
+                        <td>子元素，活动项。</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><span class="us-badge">注意</span>  可通过改写li的样式width/margin-left/margin-right灵活控制li的宽度和间隔，这里必须要用百分比且满足条件width(%)+margin-left(%)+margin-right(%)=100%</p>
+
+            <h3 class="tm-article-subtitle">示例</h3>
+
+            <ul class="baie-dropdown">
+                <li class="baie-active">
+                    <a href="javascript:;">全部</a>
+                </li>
+                <li>
+                    <a href="javascript:;">体现</a>
+                </li>
+                <li>
+                    <a href="javascript:;">奖金</a>
+                </li>
+                <li>
+                    <a href="javascript:;">收货款</a>
+                </li>
+                <li>
+                    <a href="javascript:;">付贷款</a>
+                </li>
+                <li>
+                    <a href="javascript:;">运费</a>
+                </li>
+                <li>
+                    <a href="javascript:;">手续费</a>
+                </li>
+                <li>
+                    <a href="javascript:;">佣金</a>
+                </li>
+                <li>
+                    <a href="javascript:;">拓展奖</a>
+                </li>
+                <li>
+                    <a href="javascript:;">退款</a>
+                </li>
+                <li>
+                    <a href="javascript:;">代付</a>
+                </li>
+                <li>
+                    <a href="javascript:;">未结算</a>
+                </li>
+            </ul>
+            <pre><code>
+    &lt;ul class="baie-dropdown"&gt;
+        &lt;li class="baie-active"&gt;
+            &lt;a href="javascript:;"&gt;全部&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;体现&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;奖金&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;收货款&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;付贷款&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;运费&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;手续费&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;佣金&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;拓展奖&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;退款&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;代付&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="javascript:;"&gt;未结算&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+</code></pre>
+
+        </article>
+
+        <!-- 帮助中心 -->
+        <article class="us-article">
+
+            <h1 class="us-article-title" id="help">帮助中心</h1>
+
+            <h3 class="tm-article-subtitle">用法</h3>
+
+            <div class="us-overflow-container">
+                <table class="us-table">
+                    <thead>
+                    <tr>
+                        <th>Class类</th>
+                        <th>描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>.baie-desc-list</code></td>
+                        <td>父元素，创建容器。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-desc-list-table</code></td>
+                        <td>父元素，内置表格。</td>
+                    </tr>
+                    <tr>
+                        <td><code>.baie-desc-list-inside</code></td>
+                        <td>父元素，内置列表。</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="tm-article-subtitle">示例</h3>
+
+            <div class="baie-desc-list">
+                <dl>
+                    <dt>什么是自有积分?</dt>
+                    <dd>自有积分是由你本人直接向百e国际公司订货获得的对应积分。</dd>
+                </dl>
+                <dl>
+                    <dt>月度等级规则</dt>
+                    <dd><table class="baie-desc-list-table">
+                        <thead>
+                        <tr>
+                            <th>月度等级</th>
+                            <th>自有积分</th>
+                            <th>一阶积分</th>
+                            <th>二阶积分</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>总经销</th>
+                            <td>3.6W</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>白晶玫瑰</th>
+                            <td>3.6W</td>
+                            <td>2.7W</td>
+                            <td>0</td>
+                        </tr>
+                        </tbody>
+                    </table></dd>
+                </dl>
+                <dl>
+                    <dt>月度市场补贴结算规则</dt>
+                    <dd>
+                        <div class="baie-desc-list-inside">
+                            <dl>
+                                <dt>玫瑰皇后市场补贴</dt>
+                                <dd>
+                                    玫瑰皇后市场补贴=您的玫瑰皇后一阶有效积分*全网自有积分之和*0.8% /所有符合要求的玫瑰皇后一阶积分之和。<br>
+                                    当二阶积分/一阶积分&gt;=7, 一阶有效积分=一阶积分;<br>
+                                    当二阶积分/一阶积分&lt;7, 一阶有效积分=二阶积分/7。<br>
+                                    <em>*同时能获得玫瑰皇后以下等级市场补贴。</em>
+                                </dd>
+                            </dl>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <pre><code>
+    &lt;div class="baie-desc-list"&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;什么是自有积分?&lt;/dt&gt;
+            &lt;dd&gt;自有积分是由你本人直接向百e国际公司订货获得的对应积分。&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;月度等级规则&lt;/dt&gt;
+            &lt;dd&gt;&lt;table class="baie-desc-list-table"&gt;
+                &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;月度等级&lt;/th&gt;
+                    &lt;th&gt;自有积分&lt;/th&gt;
+                    &lt;th&gt;一阶积分&lt;/th&gt;
+                    &lt;th&gt;二阶积分&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;总经销&lt;/th&gt;
+                    &lt;td&gt;3.6W&lt;/td&gt;
+                    &lt;td&gt;0&lt;/td&gt;
+                    &lt;td&gt;0&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;白晶玫瑰&lt;/th&gt;
+                    &lt;td&gt;3.6W&lt;/td&gt;
+                    &lt;td&gt;2.7W&lt;/td&gt;
+                    &lt;td&gt;0&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;月度市场补贴结算规则&lt;/dt&gt;
+            &lt;dd&gt;
+                &lt;div class="baie-desc-list-inside"&gt;
+                    &lt;dl&gt;
+                        &lt;dt&gt;玫瑰皇后市场补贴&lt;/dt&gt;
+                        &lt;dd&gt;
+                            玫瑰皇后市场补贴=您的玫瑰皇后一阶有效积分*全网自有积分之和*0.8% /所有符合要求的玫瑰皇后一阶积分之和。&lt;br&gt;
+                            当二阶积分/一阶积分&gt;=7, 一阶有效积分=一阶积分;&lt;br&gt;
+                            当二阶积分/一阶积分&lt;7, 一阶有效积分=二阶积分/7。&lt;br&gt;
+                            &lt;em&gt;*同时能获得玫瑰皇后以下等级市场补贴。&lt;/em&gt;
+                        &lt;/dd&gt;
+                    &lt;/dl&gt;
+                &lt;/div&gt;
+            &lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/div&gt;
+</code></pre>
+
+        </article>
+
+
+    </div>
+
+    <div class="tm-sidebar us-width-medium-1-4 us-hidden-small" id="affix">
+
+        <ul class="tm-nav us-nav" id="toc" style="height: 500px; overflow: auto; background-color: #fff">
+            <li><a href="#base">基础</a></li>
+            <li><a href="#grid">网格</a></li>
+            <li><a href="#flex">布局</a></li>
+            <li><a href="#header">头部</a></li>
+            <li><a href="#footer">页脚</a></li>
+            <li><a href="#panel">面板</a></li>
+            <li><a href="#list">列表</a></li>
+            <li><a href="#input">表单</a></li>
+            <li><a href="#article">文章</a></li>
+            <li><a href="#button">按钮</a></li>
+            <li><a href="#tab">选项卡</a></li>
+            <li><a href="#toolbar">工具栏</a></li>
+            <li><a href="#navbar">导航栏</a></li>
+            <li><a href="#searchbar">搜索栏</a></li>
+            <li><a href="#search">搜索框</a></li>
+            <li><a href="#msg">提示页</a></li>
+            <li><a href="#toast">提示框</a></li>
+            <li><a href="#dialog">弹出窗</a></li>
+            <li><a href="#gallery">查看大图</a></li>
+            <li><a href="#loadmore">加载更多</a></li>
+            <li><a href="#dropdown">下拉菜单</a></li>
+            <li><a href="#help">帮助中心</a></li>
+        </ul>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+<div class="tm-footer">
+    <div class="us-container us-container-center us-text-center">
+
+        <!--<ul class="us-subnav us-subnav-line us-flex-center">
+            <li><a href="../../github.com/uikit/uikit/index.htm">GitHub</a></li>
+            <li><a href="../../github.com/uikit/uikit/issues/index.htm">Issues</a></li>
+            <li><a href="../../github.com/uikit/uikit/blob/master/CHANGELOG.md">Changelog</a></li>
+            <li><a href="../../twitter.com/getuikit/index.htm">Twitter</a></li>
+        </ul>-->
+
+        <div class="us-panel">
+            <p>Made by Baie with love and caffeine.</p>
+            <a href="index.html">
+                <img src="/assets/images/logo.png" width="90" height="30" title="UIkit" alt="UIkit">
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div id="tm-offcanvas" class="us-offcanvas">
+
+    <div class="us-offcanvas-bar">
+
+        <ul class="us-nav us-nav-offcanvas us-nav-parent-icon" data-us-nav="{multiple:true}">
+            <li><a href="#base">基础</a></li>
+            <li><a href="#grid">网格</a></li>
+            <li><a href="#flex">布局</a></li>
+            <li><a href="#header">头部</a></li>
+            <li><a href="#footer">页脚</a></li>
+            <li><a href="#panel">面板</a></li>
+            <li><a href="#list">列表</a></li>
+            <li><a href="#input">表单</a></li>
+            <li><a href="#article">文章</a></li>
+            <li><a href="#button">按钮</a></li>
+            <li><a href="#tab">选项卡</a></li>
+            <li><a href="#toolbar">工具栏</a></li>
+            <li><a href="#navbar">导航栏</a></li>
+            <li><a href="#searchbar">搜索栏</a></li>
+            <li><a href="#msg">提示页</a></li>
+            <li><a href="#toast">提示框</a></li>
+            <li><a href="#dialog">弹出窗</a></li>
+            <li><a href="#search">搜索框</a></li>
+            <li><a href="#gallery">查看大图</a></li>
+            <li><a href="#loadmore">加载更多</a></li>
+            <li><a href="#dropdown">下拉菜单</a></li>
+            <li><a href="#help">帮助中心</a></li>
+            <!--<li class="us-nav-header">附加组件</li>-->
+            <!--<li class="us-parent"><a href="#"><i class="us-icon-folder-open"></i> 常用组件</a>
+                <ul class="us-nav-sub">
+                    <li><a href="form-advanced.html">高级表单</a></li>
+                    <li><a href="form-file.html">文件表单</a></li>
+                    <li><a href="form-password.html">密码表单</a></li>
+                    <li><a href="form-select.html">选择表单</a></li>
+                    <li><a href="placeholder.html">占位符</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                </ul>
+            </li>-->
+        </ul>
+
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/assets/scripts/docs.js"></script>
+<script src="/assets/vendor/highlight/highlight.js"></script>
+<script src="/assets/scripts/affix.js"></script>
+<script src="/assets/scripts/scrollspy.js"></script>
+<script>
+    $(function () {
+        var navHeight = $('.tm-navbar').outerHeight();
+        $('.tm-navbar').css({position: 'fixed', top: '0px', 'z-index': 9999, width: '100%'});
+        $('#affix').affix(null, 'right');
+        $.scrollspy('#toc>li>a', '#main :header[id]', 400, navHeight + 20);
+
+        //下拉框颜色变化
+        $('select').change(function(){
+            var $this=$(this),
+                val=$this.val();
+            if(val){
+                $this.css({'color':'inherit'});
+            }else{
+                $this.css({'color':''});
+            }
+        });
+    });
+</script>
+{% endblock %}
+

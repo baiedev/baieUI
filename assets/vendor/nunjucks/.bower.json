@@ -1,0 +1,30 @@
+{
+  "name": "nunjucks",
+  "main": "browser/nunjucks.min.js",
+  "ignore": [
+    "Makefile",
+    "package.json",
+    "tests",
+    "docs",
+    "index.js"
+  ],
+  "keywords": [
+    "jinja",
+    "template",
+    "templates",
+    "templating",
+    "browser"
+  ],
+  "homepage": "https://github.com/mozilla/nunjucks",
+  "version": "3.0.0",
+  "_release": "3.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.0",
+    "commit": "1a4ba95f26b98149e24cfd5491298eb2f8b4d590"
+  },
+  "_source": "https://github.com/mozilla/nunjucks.git",
+  "_target": "^3.0.0",
+  "_originalSource": "nunjucks",
+  "_direct": true
+}

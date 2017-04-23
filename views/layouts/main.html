@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!--ios web clip-->
+  <link rel="apple-touch-icon" href="//static.yoro.com/assets/images/touch-icon-iphone.png?v=20161128">
+  <link rel="apple-touch-icon" sizes="76x76" href="//static.yoro.com/assets/images/touch-icon-ipad.png?v=20161128">
+  <link rel="apple-touch-icon" sizes="120x120" href="//static.yoro.com/assets/images/touch-icon-iphone-retina.png?v=20161128">
+  <link rel="apple-touch-icon" sizes="152x152" href="//static.yoro.com/assets/images/touch-icon-ipad-retina.png?v=20161128">
+  <link rel="icon" href="/assets/images/static/favicon.ico">
+  <link rel="shortcut icon" href="/assets/images/static/favicon.ico">
+  <script>
+      (function(a){function c(){var a=f.clientWidth;750<a&&(a=750);f.style.fontSize=a/7.5+"px";d.body.style.fontSize="12px"}var d=a.document,f=d.documentElement,b=0,e;"complete"===d.readyState?c():d.addEventListener("DOMContentLoaded",function(){c()},!1);a.addEventListener("resize",function(){clearTimeout(e);e=setTimeout(c,300)},!1);a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(e),e=setTimeout(c,300))},!1);if(!b){var g=a.navigator.appVersion.match(/iphone/gi);a=a.devicePixelRatio;
+          b=g?3<=a&&(!b||3<=b)?3:2<=a&&(!b||2<=b)?2:1:1}f.setAttribute("data-dpr",b.toString())})(window);
+  </script>
+  {% block style %}{% endblock %}
+</head>
+<body>
+
+{% block content %}
+
+{% endblock %}
+
+
+<!-- 公用脚本库 -->
+{% block vendor %}
+<script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="/assets/vendor/nunjucks/browser/nunjucks.min.js"></script>
+<script>nunjucks.configure('/template', { autoescape: true })</script>
+{% endblock %}
+
+<!-- 页面脚本 -->
+{% block scripts %}
+
+{% endblock %}
+
+</body>
+
+</html>
