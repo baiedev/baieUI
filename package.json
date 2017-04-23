@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "supervisor -e json,js,css,html, -w routes,src ./bin/www",
+    "release": "pm2 start ./bin/www --name=baieUI --watch"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
